@@ -1,1 +1,138 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Séminaires IA Embarquée Toulouse</title>
+
+<style>
+/* Reset simple */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 70px; /* espace pour nav fixe */
+}
+
+a { color: #004080; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* NAVBAR identique à index.html */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+nav li { font-weight: bold; }
+.nav-logo {
+    position: absolute;
+    right: 20px;
+    height: 40px;
+}
+
+/* Sections */
+section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+h2 {
+    color: #004080;
+    border-bottom: 2px solid #004080;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+}
+
+/* News / Séminaires */
+.news-item {
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+    border-left: 4px solid #004080;
+}
+.news-item ul { margin-left: 20px; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f4f4f4;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR identique à index.html -->
+<nav>
+    <div class="nav-container">
+        <ul>
+            <li><a href="index.html#intro">Introduction</a></li>
+            <li><a href="index.html#news">Actualités</a></li>
+            <li><a href="seminaires.html">Séminaires</a></li>
+
+            <li><a href="index.html#collaborators">Collaborateurs</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <img src="images/aniti.png" alt="ANITI" class="nav-logo">
+    </div>
+</nav>
+
+<section id="seminaires">
+    <h2>Séminaires</h2>
+
+    <div class="news-item">
+        <strong>7 avril 2026 (10h-12h, ENAC) :</strong>
+        Session <em>"Quantification des réseaux de neurones"</em>
+        <ul>
+            <li>Lubin Gauthier (Doctorant, LAAS) : "Déploiement efficace des Transformers sur FPGA : des stratégies de quantification à l'architecture adaptée au matériel"</li>
+            <li>Présentation 2 : Validation et certification de modèles quantifiés</li>
+            <li>
+                <a href="pdfs/quantification.pdf" target="_blank">📄 PDF</a> | 
+                <a href="records/quantification.mp4" target="_blank">🎥 Record</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="news-item">
+        <strong>20 février 2026 (14h-16h, ENAC) :</strong>
+        Réunion de lancement du défi à <strong>l'ENAC Toulouse</strong>.
+        <ul>
+            <li>
+                <a href="pdfs/lancement.pdf" target="_blank">📄 PDF</a> | 
+                <a href="records/lancement.mp4" target="_blank">🎥 Record</a>
+            </li>
+        </ul>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Défi Embarquabilité de l'IA Toulouse</p>
+</footer>
+
+</body>
+</html>

@@ -1,1 +1,214 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Défi IA Embarquée Toulouse</title>
+
+<style>
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 70px; /* IMPORTANT pour nav fixe */
+}
+
+a { color: #004080; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav li {
+    font-weight: bold;
+}
+
+.nav-logo {
+    position: absolute;
+    right: 20px;
+    height: 40px;
+}
+
+/* LOGOS HEADER */
+.logos img {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+}
+
+/* HEADER */
+header {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* SECTIONS */
+section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: #004080;
+    border-bottom: 2px solid #004080;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+}
+
+.news-item {
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+    border-left: 4px solid #004080;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f4f4f4;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#news">Actualités</a></li>
+            <li><a href="seminaires.html">Séminaires</a></li> 
+            <li><a href="#collaborators">Collaborateurs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <img src="images/aniti.png" alt="ANITI" class="nav-logo">
+    </div>
+</nav>
+
+<header>
+    <h1>Défi IA Embarquée</h1>
+    <p>Recherche et animation scientifique autour de l’intelligence artificielle embarquée à Toulouse</p>
+
+    <div class="logos">
+        <img src="images/onera.png" alt="ONERA">
+        <img src="images/irit.png" alt="IRIT">
+        <img src="images/enac.jpeg" alt="ENAC">
+        <img src="images/isae.jpg" alt="ISAE-SUPAERO">
+        <img src="images/laas.png" alt="LAAS-CNRS">
+    </div>
+</header>
+
+<section id="intro">
+    <h2>Introduction</h2>
+    <p>
+        Le défi <strong>"Embarquabilité de l'IA"</strong> s’inscrit dans le cadre de l'institut
+        <a href="https://aniti.univ-toulouse.fr" target="_blank">ANITI de Toulouse</a>
+        et de la chaire
+        <a href="https://aniti.univ-toulouse.fr/fr_fr/embeddability-and-safety-assurance-of-ml-based-systems-under-certification" target="_blank">
+        CertifEmbAI – Certification of Machine Learning-based Systems
+        </a>.
+        Le défi réunit les chercheurs toulousains du <strong>LAAS</strong>, du <strong>IRIT</strong>,
+        de l’<strong>ENAC</strong>, de l’<strong>ISAE</strong>, de l’<strong>ONERA</strong> et d’autres établissements,
+        tous engagés dans les travaux autour de l’<strong>IA embarquée</strong>.
+    </p>
+</section>
+<section id="news"> <h2>Actualités</h2> 
+    <div class="news-item"> 
+        <strong>7 avril 2026 (10h-12h, ENAC) :</strong> 
+        Session <em>"Quantification des réseaux de neurones"</em> 
+      </div>
+    <div class="news-item"> 
+        <strong>20 février 2026 (14h-16h, ENAC) :</strong> 
+        Réunion de lancement du défi à <strong>l'ENAC Toulouse</strong>.
+    </div> 
+</section> 
+    <section id="collaborators"> 
+        <h2>Collaborateurs</h2> 
+        <ul> <li>BEN KHALIFA Dorra – MCF, ENAC LAB (Animatrice)</li> 
+            <li>CARLE Thomas – MCF(HDR), IRIT-UT (Animateur)</li> 
+            <li>PAGETTI Claire – DR, ONERA</li> 
+            <li>TAP Hélène – Prof., LAAS-CNRS</li>
+            <li>MULLIEZ Blaise – MCF, LAAS-CNRS</li> 
+            <li>ROYNARD Michaël – IR, SCALIAN</li>
+            <li>GUINEBERT Iban – IR, SCALIAN</li>
+            <li>DRAGOMIRESCU Daniela – Prof., LAAS-CNRS</li>
+            <li>BONY Francis – MCF, LAAS-CNRS</li>
+            <li>PERCHOUX Julien – Prof., LAAS-CNRS</li>
+            <li>QUOTB Adam – MCF, LAAS-CNRS</li> 
+            <li>GAROCHE Pierre-Loic – Prof., ENAC LAB</li>
+            <li>COUELLAN Nicolas – Prof., ENAC LAB</li> 
+            <li>GARION Christophe – MCF, ISAE-SUPAERO</li> 
+            <li>DION Arnaud – MCF, ISAE-SUPAERO</li>
+            <li>CHAUDRON Jean-Baptiste – IR, ISAE-SUPAERO</li> 
+            <li>LOUBET Gaël – MCF, LAAS-CNRS</li>
+            <li>JONCKEERE Matthieu – DR, LAAS-CNRS</li>
+            <li>MONMAYRANT Antoine – CR, LAAS-CNRS</li>
+            <li>LOLIVE Louis – LAAS-CNRS</li>
+            <li>GUIOCHET Jérémie – LAAS-CNRS</li>
+            <li>WAESELINCK Hélène – LAAS-CNRS</li> 
+            <li>KLODA Tomasz – LAAS-CNRS</li>
+            <li>LAFDILI Aya – Doctorante, LAAS-CNRS/NXP</li> 
+            </ul> 
+    </section>
+    <section id="contact"> 
+        <h2>Contact</h2> <p> <strong>Liste de diffusion :</strong><br> 
+            Pour vous inscrire ou diffuser une information, envoyez un email à : <a href="mailto:defi-ia-embarque@groupes.renater.fr"> 
+                defi-ia-embarque@groupes.renater.fr </a> </p> </section>
+<footer>
+    <p>&copy; 2026 Défi Embarquabilité de l'IA Toulouse</p>
+</footer>
+
+</body>
+</html>

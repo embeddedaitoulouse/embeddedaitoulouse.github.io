@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -52,6 +51,41 @@ nav li {
     position: absolute;
     right: 20px;
     height: 40px;
+}
+
+/* SÉLECTEUR DE LANGUE */
+.lang-switch {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: bold;
+    color: #999;
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    font: inherit;
+    font-weight: bold;
+    color: #004080;
+    cursor: pointer;
+    padding: 0.2rem 0.3rem;
+    border-bottom: 2px solid transparent;
+}
+
+.lang-switch button:hover { text-decoration: underline; }
+
+.lang-switch button[aria-pressed="true"] {
+    border-bottom-color: #004080;
+    cursor: default;
+    text-decoration: none;
+}
+
+.lang-switch button:focus-visible {
+    outline: 2px solid #004080;
+    outline-offset: 2px;
 }
 
 /* LOGOS HEADER */
@@ -118,6 +152,15 @@ footer {
 }
 
 html { scroll-behavior: smooth; }
+
+/* MOBILE : le menu passe sous le sélecteur de langue */
+@media (max-width: 800px) {
+    body { padding-top: 110px; }
+    .nav-container { flex-direction: column; gap: 0.5rem; }
+    .lang-switch, .nav-logo { position: static; }
+    .nav-logo { height: 30px; }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 0.5rem 1rem; }
+}
 </style>
 </head>
 
@@ -125,12 +168,19 @@ html { scroll-behavior: smooth; }
 
 <nav>
     <div class="nav-container">
+
+        <div class="lang-switch" role="group" aria-label="Langue / Language">
+            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
         <ul>
-            <li><a href="#intro">Introduction</a></li>
-            <li><a href="#news">Actualités</a></li>
-            <li><a href="seminaires.html">Séminaires</a></li> 
-            <li><a href="#collaborators">Collaborateurs</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#intro" data-i18n="nav.intro">Introduction</a></li>
+            <li><a href="#news" data-i18n="nav.news">Actualités</a></li>
+            <li><a href="seminaires.html" data-i18n="nav.seminars">Séminaires</a></li>
+            <li><a href="#collaborators" data-i18n="nav.collaborators">Collaborateurs</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
 
         <img src="images/aniti.png" alt="ANITI" class="nav-logo">
@@ -138,8 +188,8 @@ html { scroll-behavior: smooth; }
 </nav>
 
 <header>
-    <h1>Défi Embarquabilité de l'IA</h1>
-    <p>Recherche et animation scientifique autour de l’intelligence artificielle embarquée à Toulouse</p>
+    <h1 data-i18n="header.title">Défi Embarquabilité de l'IA</h1>
+    <p data-i18n="header.subtitle">Recherche et animation scientifique autour de l’intelligence artificielle embarquée à Toulouse</p>
 
     <div class="logos">
         <img src="images/onera.png" alt="ONERA">
@@ -151,71 +201,82 @@ html { scroll-behavior: smooth; }
 </header>
 
 <section id="intro">
-    <h2>Introduction</h2>
-    <p>
+    <h2 data-i18n="intro.title">Introduction</h2>
+    <p data-i18n-html="intro.text">
         Le défi <strong>"Embarquabilité de l'IA"</strong> s’inscrit dans le cadre de l'institut
         <a href="https://aniti.univ-toulouse.fr" target="_blank">ANITI de Toulouse</a>
         et de la chaire
-        <a href="https://aniti.univ-toulouse.fr/fr_fr/embeddability-and-safety-assurance-of-ml-based-systems-under-certification" target="_blank">
-        CertifEmbAI – Certification of Machine Learning-based Systems
-        </a>.
+        <a href="https://aniti.univ-toulouse.fr/fr_fr/embeddability-and-safety-assurance-of-ml-based-systems-under-certification" target="_blank">CertifEmbAI – Certification of Machine Learning-based Systems</a>.
         Le défi réunit les chercheurs toulousains du <strong>LAAS</strong>, du <strong>IRIT</strong>,
         de l’<strong>ENAC</strong>, de l’<strong>ISAE</strong>, de l’<strong>ONERA</strong> et d’autres établissements,
         tous engagés dans les travaux autour de l’<strong>IA embarquée</strong>.
     </p>
 </section>
-<section id="news"> <h2>Actualités</h2> 
-    <div class="news-item">
+
+<section id="news">
+    <h2 data-i18n="news.title">Actualités</h2>
+
+    <div class="news-item" data-i18n-html="news.1">
         <strong>3 novembre 2026 (14h, ENAC) :</strong>
         <strong>Séminaire</strong> avec
         <strong>Iryna de Albuquerque Silva (CEA List)</strong> :
         <em>"Aidge : un framework open-source et collaboratif pour la conception,
-        l'optimisation et le déploiement de l'IA embarquée"</em>.       
+        l'optimisation et le déploiement de l'IA embarquée"</em>.
     </div>
 
-    <div class="news-item"> 
-        <strong>7 avril 2026 (10h-12h, ENAC) :</strong> 
-        Session <em>"Quantification des réseaux de neurones"</em> 
-      </div>
-    <div class="news-item"> 
-        <strong>20 février 2026 (14h-16h, ENAC) :</strong> 
+    <div class="news-item" data-i18n-html="news.2">
+        <strong>7 avril 2026 (10h-12h, ENAC) :</strong>
+        Session <em>"Quantification des réseaux de neurones"</em>
+    </div>
+
+    <div class="news-item" data-i18n-html="news.3">
+        <strong>20 février 2026 (14h-16h, ENAC) :</strong>
         Réunion de lancement du défi à <strong>l'ENAC Toulouse</strong>.
-    </div> 
-</section> 
-    <section id="collaborators"> 
-        <h2>Collaborateurs</h2> 
-        <ul> <li>BEN KHALIFA Dorra – MCF, ENAC LAB (Animatrice)</li> 
-            <li>CARLE Thomas – MCF (HDR), IRIT-UT (Animateur)</li> 
-            <li>PAGETTI Claire – DR, ONERA</li> 
-            <li>TAP Hélène – Prof., LAAS-CNRS</li>
-            <li>MULLIEZ Blaise – MCF, LAAS-CNRS</li> 
-            <li>ROYNARD Michaël – IR, SCALIAN</li>
-            <li>GUINEBERT Iban – IR, SCALIAN</li>
-            <li>DRAGOMIRESCU Daniela – Prof., LAAS-CNRS</li>
-            <li>BONY Francis – MCF, LAAS-CNRS</li>
-            <li>PERCHOUX Julien – Prof., LAAS-CNRS</li>
-            <li>QUOTB Adam – MCF, LAAS-CNRS</li> 
-            <li>GAROCHE Pierre-Loic – Prof., ENAC LAB</li>
-            <li>COUELLAN Nicolas – Prof., ENAC LAB</li> 
-            <li>GARION Christophe – MCF, ISAE-SUPAERO</li> 
-            <li>DION Arnaud – MCF, ISAE-SUPAERO</li>
-            <li>LOUBET Gaël – MCF, LAAS-CNRS</li>
-            <li>JONCKEERE Matthieu – DR, LAAS-CNRS</li>
-            <li>MONMAYRANT Antoine – CR, LAAS-CNRS</li>
-            <li>LOLIVE Louis – LAAS-CNRS</li>
-            <li>GUIOCHET Jérémie – LAAS-CNRS</li>
-            <li>WAESELINCK Hélène – LAAS-CNRS</li> 
-            <li>KLODA Tomasz – LAAS-CNRS</li>
-            <li>LAFDILI Aya – Doctorante, LAAS-CNRS/NXP</li> 
-            </ul> 
-    </section>
-    <section id="contact"> 
-        <h2>Contact</h2> <p> <strong>Liste de diffusion :</strong><br> 
-            Pour vous inscrire ou diffuser une information, envoyez un email à : <a href="mailto:defi-ia-embarque@groupes.renater.fr"> 
-                defi-ia-embarque@groupes.renater.fr </a> </p> </section>
+    </div>
+</section>
+
+<section id="collaborators">
+    <h2 data-i18n="collab.title">Collaborateurs</h2>
+    <ul>
+        <li>BEN KHALIFA Dorra – <span data-i18n="role.mcf">MCF</span>, ENAC LAB <span data-i18n="role.animatrice">(Animatrice)</span></li>
+        <li>CARLE Thomas – <span data-i18n="role.mcfhdr">MCF (HDR)</span>, IRIT-UT <span data-i18n="role.animateur">(Animateur)</span></li>
+        <li>PAGETTI Claire – <span data-i18n="role.dr">DR</span>, ONERA</li>
+        <li>TAP Hélène – <span data-i18n="role.prof">Prof.</span>, LAAS-CNRS</li>
+        <li>MULLIEZ Blaise – <span data-i18n="role.mcf">MCF</span>, LAAS-CNRS</li>
+        <li>ROYNARD Michaël – <span data-i18n="role.ir">IR</span>, SCALIAN</li>
+        <li>GUINEBERT Iban – <span data-i18n="role.ir">IR</span>, SCALIAN</li>
+        <li>DRAGOMIRESCU Daniela – <span data-i18n="role.prof">Prof.</span>, LAAS-CNRS</li>
+        <li>BONY Francis – <span data-i18n="role.mcf">MCF</span>, LAAS-CNRS</li>
+        <li>PERCHOUX Julien – <span data-i18n="role.prof">Prof.</span>, LAAS-CNRS</li>
+        <li>QUOTB Adam – <span data-i18n="role.mcf">MCF</span>, LAAS-CNRS</li>
+        <li>GAROCHE Pierre-Loic – <span data-i18n="role.prof">Prof.</span>, ENAC LAB</li>
+        <li>COUELLAN Nicolas – <span data-i18n="role.prof">Prof.</span>, ENAC LAB</li>
+        <li>GARION Christophe – <span data-i18n="role.mcf">MCF</span>, ISAE-SUPAERO</li>
+        <li>DION Arnaud – <span data-i18n="role.mcf">MCF</span>, ISAE-SUPAERO</li>
+        <li>LOUBET Gaël – <span data-i18n="role.mcf">MCF</span>, LAAS-CNRS</li>
+        <li>JONCKEERE Matthieu – <span data-i18n="role.dr">DR</span>, LAAS-CNRS</li>
+        <li>MONMAYRANT Antoine – <span data-i18n="role.cr">CR</span>, LAAS-CNRS</li>
+        <li>LOLIVE Louis – LAAS-CNRS</li>
+        <li>GUIOCHET Jérémie – LAAS-CNRS</li>
+        <li>WAESELINCK Hélène – LAAS-CNRS</li>
+        <li>KLODA Tomasz – LAAS-CNRS</li>
+        <li>LAFDILI Aya – <span data-i18n="role.phd">Doctorante</span>, LAAS-CNRS/NXP</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2 data-i18n="contact.title">Contact</h2>
+    <p data-i18n-html="contact.text">
+        <strong>Liste de diffusion :</strong><br>
+        Pour vous inscrire ou diffuser une information, envoyez un email à :
+        <a href="mailto:defi-ia-embarque@groupes.renater.fr">defi-ia-embarque@groupes.renater.fr</a>
+    </p>
+</section>
+
 <footer>
-    <p>&copy; 2026 Défi Embarquabilité de l'IA Toulouse</p>
+    <p data-i18n="footer.text">&copy; 2026 Défi Embarquabilité de l'IA Toulouse</p>
 </footer>
 
+<script src="i18n.js"></script>
 </body>
 </html>

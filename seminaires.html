@@ -1,135 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Séminaires IA Embarquée Toulouse</title>
-
-<style>
-/* Reset simple */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    padding-top: 70px; /* espace pour nav fixe */
-}
-
-a { color: #004080; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* NAVBAR identique à index.html */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    z-index: 1000;
-}
-.nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 1rem;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-nav li { font-weight: bold; }
-.nav-logo {
-    position: absolute;
-    right: 20px;
-    height: 40px;
-}
-
-/* Sections */
-section {
-    padding: 3rem 2rem;
-    max-width: 900px;
-    margin: auto;
-}
-h2 {
-    color: #004080;
-    border-bottom: 2px solid #004080;
-    display: inline-block;
-    margin-bottom: 1rem;
-    padding-bottom: 0.3rem;
-}
-
-/* News / Séminaires */
-.news-item {
-    margin-bottom: 1.2rem;
-    padding-left: 1rem;
-    border-left: 4px solid #004080;
-}
-.news-item ul { margin-left: 20px; }
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #f4f4f4;
-    margin-top: 4rem;
-    font-size: 0.9rem;
-}
-
-html { scroll-behavior: smooth; }
-</style>
+<title>Séminaires – Défi IA Embarquée Toulouse</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR identique à index.html -->
 <nav>
     <div class="nav-container">
-        <ul>
-            <li><a href="index.html#intro">Introduction</a></li>
-            <li><a href="index.html#news">Actualités</a></li>
-            <li><a href="seminaires.html">Séminaires</a></li>
+        <div class="lang-switch" role="group" aria-label="Langue / Language">
+            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
 
-            <li><a href="index.html#collaborators">Collaborateurs</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+        <ul>
+            <li><a href="index.html#intro" data-i18n="nav.intro">Introduction</a></li>
+            <li><a href="index.html#news" data-i18n="nav.news">Actualités</a></li>
+            <li><a href="seminaires.html" aria-current="page" data-i18n="nav.seminars">Séminaires</a></li>
+            <li><a href="communaute.html" data-i18n="nav.community">Communauté</a></li>
+            <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
 
         <img src="images/aniti.png" alt="ANITI" class="nav-logo">
     </div>
 </nav>
 
-<section id="seminaires">
-    <h2>Séminaires</h2>
+<header>
+    <h1 data-i18n="seminars.title">Séminaires</h1>
+    <p data-i18n="seminars.subtitle">Rencontres scientifiques autour de l’IA embarquée</p>
+</header>
 
-    <div class="news-item">
-        <strong>7 avril 2026 (10h-12h, ENAC) :</strong>
-        Session <em>"Quantification des réseaux de neurones"  <a href="records/lancement.mp4" target="_blank">🎥 Record</a></em>
-        <ul>
-            <li>Lubin Gauthier (Doctorant, LAAS) : "Déploiement efficace des Transformers sur FPGA : des stratégies de quantification à l'architecture
-                adaptée au matériel"<strong>(<a href="pdfs/Embarquabilité-IA_Quantification_LG.pdf" target="_blank">📄 PDF</a>)</strong></li>
-        
+<section id="upcoming">
+    <h2 data-i18n="seminars.upcoming">À venir</h2>
 
-            <li>Dorra Ben Khalifa (ENAC) : "Quantification formelle des réseaux de neurones profonds sur des architectures en arithmétique à virgule Fixe" <strong>
-                (<a href="pdfs/popinns.pdf" target="_blank">📄 PDF</a> </strong>
-) </li>
-         
-        </ul>
-    </div>
+    <article class="seminar upcoming">
+        <div class="date-badge"><span class="day">30</span><span class="month">nov. 2026</span></div>
+        <div class="seminar-body">
+            <h3>Tutorial on the FloPoCo generator</h3>
+            <p class="seminar-meta">
+                <strong>Orégane Desrentes</strong> (Inria – LMF) · 14h · ENAC
+            </p>
+        </div>
+    </article>
+</section>
 
-    <div class="news-item">
-        <strong>20 février 2026 (14h-16h, ENAC) :</strong>
-        Réunion de lancement du défi à l'ENAC Toulouse <strong>(<a href="pdfs/Défi_embarquabilité_de_l_IA-1.pdf" target="_blank">📄 PDF</a>)</strong>
+<section id="past">
+    <h2 data-i18n="seminars.past">Séminaires passés</h2>
 
-    </div>
+    <article class="seminar">
+        <div class="date-badge"><span class="day">3</span><span class="month">nov. 2026</span></div>
+        <div class="seminar-body">
+            <h3>Aidge : un framework open-source et collaboratif pour la conception, l'optimisation et le déploiement de l'IA embarquée</h3>
+            <p class="seminar-meta">
+                <strong>Iryna de Albuquerque Silva</strong> (CEA List) · 14h · ENAC
+            </p>
+        </div>
+    </article>
 
+    <article class="seminar">
+        <div class="date-badge"><span class="day">7</span><span class="month">avr. 2026</span></div>
+        <div class="seminar-body">
+            <h3>Session « Quantification des réseaux de neurones »</h3>
+            <p class="seminar-meta">10h – 12h · ENAC</p>
+            <ul class="seminar-talks">
+                <li>
+                    <strong>Lubin Gauthier</strong> (doctorant, LAAS) : « Déploiement efficace des Transformers sur FPGA : des stratégies de quantification à l'architecture adaptée au matériel »
+                    <a href="pdfs/Embarquabilité-IA_Quantification_LG.pdf" target="_blank" rel="noopener">📄 PDF</a>
+                </li>
+                <li>
+                    <strong>Dorra Ben Khalifa</strong> (ENAC) : « Quantification formelle des réseaux de neurones profonds sur des architectures en arithmétique à virgule fixe »
+                    <a href="pdfs/popinns.pdf" target="_blank" rel="noopener">📄 PDF</a>
+                </li>
+            </ul>
+            <p class="resources"><a href="records/lancement.mp4" target="_blank" rel="noopener">🎥 Enregistrement</a></p>
+        </div>
+    </article>
+
+    <article class="seminar">
+        <div class="date-badge"><span class="day">20</span><span class="month">fév. 2026</span></div>
+        <div class="seminar-body">
+            <h3>Réunion de lancement du défi</h3>
+            <p class="seminar-meta">14h – 16h · ENAC Toulouse</p>
+            <p class="resources"><a href="pdfs/Défi_embarquabilité_de_l_IA-1.pdf" target="_blank" rel="noopener">📄 PDF</a></p>
+        </div>
+    </article>
 </section>
 
 <footer>
-    <p>&copy; 2026 Défi Embarquabilité de l'IA Toulouse</p>
+    <p data-i18n="footer.text">&copy; 2026 Défi Embarquabilité de l'IA Toulouse</p>
 </footer>
 
+<script src="i18n.js"></script>
 </body>
 </html>

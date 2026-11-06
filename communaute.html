@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Communauté – Défi IA Embarquée Toulouse</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="lang-switch" role="group" aria-label="Langue / Language">
+            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <ul>
+            <li><a href="index.html#intro" data-i18n="nav.intro">Introduction</a></li>
+            <li><a href="index.html#news" data-i18n="nav.news">Actualités</a></li>
+            <li><a href="seminaires.html" data-i18n="nav.seminars">Séminaires</a></li>
+            <li><a href="communaute.html" aria-current="page" data-i18n="nav.community">Communauté</a></li>
+            <li><a href="index.html#collaborators" data-i18n="nav.collaborators">Collaborateurs</a></li>
+            <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+
+        <img src="images/aniti.png" alt="ANITI" class="nav-logo">
+    </div>
+</nav>
+
+<header>
+    <h1 data-i18n="community.title">Communauté</h1>
+    <p data-i18n="community.subtitle">Doctorants, publications et projets autour de l’IA embarquée à Toulouse</p>
+</header>
+
+<section id="phd">
+    <h2 data-i18n="phd.title">Thèses en cours</h2>
+    <div class="cards">
+
+        <article class="card">
+            <h3>Loïc THOMAS</h3>
+            <p class="meta" data-i18n="phd.1.meta">Début de thèse : 01/11/2024</p>
+            <p data-i18n="phd.1.text">IA embarquée sous forme de circuits sur FPGA.</p>
+        </article>
+
+        <article class="card">
+            <h3>Julien MARC</h3>
+            <p class="meta" data-i18n="phd.2.meta">Début de thèse : 01/10/2026</p>
+            <p data-i18n="phd.2.text">IA embarquée et circuits neuromorphiques.</p>
+        </article>
+
+    </div>
+</section>
+
+<section id="publications">
+    <h2 data-i18n="pub.title">Publications 2026</h2>
+    <ul class="pub-list">
+        <li>
+            Loïc Thomas, Gaël Loubet, Gabriela Nicolescu, Daniela Dragomirescu,
+            <em>"Logic-Only On-Line Fine-Tuning and Inference of Self-Organizing Map for Source Localization"</em>.
+            <div class="pub-venue">URSI GASS 2026, Krakow, 15-22 August 2026.</div>
+        </li>
+    </ul>
+</section>
+
+<footer>
+    <p data-i18n="footer.text">&copy; 2026 Défi Embarquabilité de l'IA Toulouse</p>
+</footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>

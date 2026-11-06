@@ -30,9 +30,14 @@
     </div>
 </nav>
 
-<header>
+<header class="hero">
     <h1 data-i18n="header.title">Défi Embarquabilité de l'IA</h1>
     <p data-i18n="header.subtitle">Recherche et animation scientifique autour de l’intelligence artificielle embarquée à Toulouse</p>
+
+    <div class="hero-actions">
+        <a class="btn btn-primary" href="seminaires.html" data-i18n="nav.seminars">Séminaires</a>
+        <a class="btn btn-outline" href="communaute.html" data-i18n="nav.community">Communauté</a>
+    </div>
 
     <div class="logos">
         <img src="images/onera.png" alt="ONERA">
@@ -43,9 +48,15 @@
     </div>
 </header>
 
+<div class="stats">
+    <div class="stat"><span class="stat-num">5</span><span class="stat-label" data-i18n="stats.labs">laboratoires et établissements</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label" data-i18n="stats.phd">thèses en cours</span></div>
+    <div class="stat"><span class="stat-num">1</span><span class="stat-label" data-i18n="stats.seminar">séminaire à venir</span></div>
+</div>
+
 <section id="intro">
     <h2 data-i18n="intro.title">Introduction</h2>
-    <p data-i18n-html="intro.text">
+    <p class="lead" data-i18n-html="intro.text">
         Le défi <strong>"Embarquabilité de l'IA"</strong> s’inscrit dans le cadre de l'institut
         <a href="https://aniti.univ-toulouse.fr" target="_blank">ANITI de Toulouse</a>
         et de la chaire
@@ -58,35 +69,42 @@
 
 <section id="news">
     <h2 data-i18n="news.title">Actualités</h2>
-<div class="news-item" data-i18n-html="news.4">
-    <strong>30 novembre 2026 (14h, amphi Boucher - ENAC) :</strong>
-    <strong>Séminaire</strong> avec
-    <strong>Orégane Desrentes (Inria - LMF)</strong> :
-    <em>"Tutorial on the FloPoCo generator"</em>.
-</div>
+
+    <div class="news-item" data-i18n-html="news.4">
+        <strong>30 novembre 2026 (14h, ENAC) :</strong>
+        <strong>Séminaire</strong> avec
+        <strong>Orégane Desrentes (Inria - LMF)</strong> :
+        <em>"Tutorial on the FloPoCo generator"</em>.
+    </div>
+
     <div class="news-item" data-i18n-html="news.1">
-        <strong>3 novembre 2026 (14h, amphi Boucher - ENAC) :</strong>
+        <strong>3 novembre 2026 (14h, ENAC) :</strong>
         <strong>Séminaire</strong> avec
         <strong>Iryna de Albuquerque Silva (CEA List)</strong> :
         <em>"Aidge : un framework open-source et collaboratif pour la conception,
         l'optimisation et le déploiement de l'IA embarquée"</em>.
     </div>
-
 </section>
 
 <section id="contact">
     <h2 data-i18n="contact.title">Contact</h2>
 
-    <ul>
-        <li>BEN KHALIFA Dorra – <span data-i18n="role.mcf">MCF</span>, LII, ENAC-LAB <span data-i18n="role.animatrice">(Animatrice)</span></li>
-        <li>CARLE Thomas – <span data-i18n="role.mcfhdr">MCF (HDR)</span>, IRIT-UT <span data-i18n="role.animateur">(Animateur)</span></li>
-    </ul>
+    <div class="cards">
+        <article class="card">
+            <ul class="people">
+                <li>BEN KHALIFA Dorra – <span data-i18n="role.mcf">MCF</span>, LII, ENAC-LAB <span data-i18n="role.animatrice">(Animatrice)</span></li>
+                <li>CARLE Thomas – <span data-i18n="role.mcfhdr">MCF (HDR)</span>, IRIT-UT <span data-i18n="role.animateur">(Animateur)</span></li>
+            </ul>
+        </article>
 
-    <p data-i18n-html="contact.text" style="margin-top: 1rem;">
-        <strong>Liste de diffusion :</strong><br>
-        Pour vous inscrire ou diffuser une information, envoyez un email à :
-        <a href="mailto:defi-ia-embarque@groupes.renater.fr">defi-ia-embarque@groupes.renater.fr</a>
-    </p>
+        <article class="card">
+            <p data-i18n-html="contact.text">
+                <strong>Liste de diffusion :</strong><br>
+                Pour vous inscrire ou diffuser une information, envoyez un email à :
+                <a href="mailto:defi-ia-embarque@groupes.renater.fr">defi-ia-embarque@groupes.renater.fr</a>
+            </p>
+        </article>
+    </div>
 </section>
 
 <footer>

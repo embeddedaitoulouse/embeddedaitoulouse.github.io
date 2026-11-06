@@ -132,7 +132,7 @@ html { scroll-behavior: smooth; }
     body { padding-top: 110px; }
     .nav-container { flex-direction: column; gap: 0.5rem; }
     .lang-switch, .nav-logo { position: static; }
-    .nav-logo { height: 30px; }
+    .nav-logo img { height: 30px; }
     nav ul { flex-wrap: wrap; justify-content: center; gap: 0.5rem 1rem; }
 }
 /* SÉMINAIRES */

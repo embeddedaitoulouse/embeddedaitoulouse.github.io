@@ -171,3 +171,70 @@ html { scroll-behavior: smooth; }
     .seminar { flex-direction: column; gap: 0.6rem; }
     .date-badge { flex: none; align-self: flex-start; padding: 0.4rem 0.8rem; }
 }
+
+/* ACCUEIL MODERNE */
+.hero {
+    background: linear-gradient(135deg, #003060 0%, #004080 55%, #1a66b3 100%);
+    padding: 4rem 1rem 3rem 1rem;
+}
+.hero h1 { font-size: 2.6rem; letter-spacing: -0.5px; }
+.hero > p { max-width: 700px; margin: 0.5rem auto 0; opacity: 0.92; }
+
+.hero-actions { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin: 1.8rem 0 2rem; }
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    border-radius: 999px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    transition: transform 0.2s, background 0.2s;
+}
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn-primary { background: #fff; color: #004080; }
+.btn-outline { background: transparent; color: #fff; }
+.btn-outline:hover { background: rgba(255,255,255,0.15); }
+
+.hero .logos { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
+
+/* CHIFFRES CLÉS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: -1.8rem auto 0;
+    padding: 0 1rem;
+    position: relative;
+}
+.stat {
+    flex: 1 1 200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    padding: 1rem;
+    text-align: center;
+}
+.stat-num { display: block; font-size: 2rem; font-weight: bold; color: #004080; line-height: 1.1; }
+.stat-label { font-size: 0.9rem; color: #666; }
+
+/* TEXTE & ACTUALITÉS */
+.lead { font-size: 1.1rem; line-height: 1.8; }
+
+.news-item {
+    background: #f4f8fd;
+    border-radius: 0 6px 6px 0;
+    padding: 0.9rem 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.news-item:hover { transform: translateX(4px); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+/* CONTACT */
+.people { list-style: none; }
+.people li { margin-bottom: 0.6rem; }
+.people li:last-child { margin-bottom: 0; }
+
+@media (max-width: 800px) {
+    .hero h1 { font-size: 2rem; }
+}

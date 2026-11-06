@@ -33,8 +33,7 @@ nav ul { list-style: none; display: flex; gap: 1.5rem; }
 nav li { font-weight: bold; }
 nav a[aria-current="page"] { border-bottom: 2px solid #004080; }
 
-.nav-logo { position: absolute; right: 20px; display: block; }
-.nav-logo img { height: 40px; display: block; }
+.nav-logo { position: absolute; right: 20px; height: 40px; }
 
 /* SÉLECTEUR DE LANGUE */
 .lang-switch {
@@ -132,7 +131,7 @@ html { scroll-behavior: smooth; }
     body { padding-top: 110px; }
     .nav-container { flex-direction: column; gap: 0.5rem; }
     .lang-switch, .nav-logo { position: static; }
-    .nav-logo img { height: 30px; }
+    .nav-logo { height: 30px; }
     nav ul { flex-wrap: wrap; justify-content: center; gap: 0.5rem 1rem; }
 }
 /* SÉMINAIRES */

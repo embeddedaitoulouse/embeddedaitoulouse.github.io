@@ -239,3 +239,16 @@ html { scroll-behavior: smooth; }
 @media (max-width: 800px) {
     .hero h1 { font-size: 2rem; }
 }
+/* OFFRES */
+.offer { margin-bottom: 1rem; }
+.tag {
+    display: inline-block;
+    background: #004080;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+}
+.empty { color: #666; font-style: italic; }

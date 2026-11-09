@@ -11,11 +11,13 @@ const TRANSLATIONS = {
     "page.title": "Défi IA Embarquée Toulouse",
     "page.title.community": "Communauté – Défi IA Embarquée Toulouse",
     "page.title.seminars": "Séminaires – Défi IA Embarquée Toulouse",
+    "page.title.offers": "Offres – Défi IA Embarquée Toulouse",
 
     "nav.intro": "Introduction",
     "nav.news": "Actualités",
     "nav.seminars": "Séminaires",
     "nav.community": "Communauté",
+    "nav.offers": "Offres",
     "nav.collaborators": "Collaborateurs",
     "nav.contact": "Contact",
 
@@ -60,11 +62,19 @@ const TRANSLATIONS = {
     "phd.3.text": "Quantification formelle des DNNs sur FPGA.",
     "phd.4.text": "Architecture d'IA sur puce pour la détection de particules en temps réel.",
     "pub.title": "Publications 2026",
+    "projects.title": "Projets en cours",
 
     "seminars.title": "Séminaires",
     "seminars.subtitle": "Rencontres scientifiques autour de l’IA embarquée",
     "seminars.upcoming": "À venir",
     "seminars.past": "Séminaires passés",
+
+    "offers.title": "Offres",
+    "offers.subtitle": "Stages et thèses autour de l’IA embarquée à Toulouse",
+    "offers.internships": "Stages",
+    "offers.phd": "Thèses",
+    "offers.tag.m2": "Stage M2",
+    "offers.none": "Aucune offre pour le moment.",
 
     "collab.title": "Collaborateurs",
     "role.mcf": "MCF",
@@ -90,11 +100,13 @@ const TRANSLATIONS = {
     "page.title": "Toulouse Embedded AI Challenge",
     "page.title.community": "Community – Toulouse Embedded AI Challenge",
     "page.title.seminars": "Seminars – Toulouse Embedded AI Challenge",
+    "page.title.offers": "Offers – Toulouse Embedded AI Challenge",
 
     "nav.intro": "Introduction",
     "nav.news": "News",
     "nav.seminars": "Seminars",
     "nav.community": "Community",
+    "nav.offers": "Offers",
     "nav.collaborators": "Collaborators",
     "nav.contact": "Contact",
 
@@ -139,11 +151,19 @@ const TRANSLATIONS = {
     "phd.3.text": "Formal quantization of DNNs on FPGA.",
     "phd.4.text": "On-chip AI architecture for real-time particle detection.",
     "pub.title": "2026 Publications",
+    "projects.title": "Ongoing projects",
 
     "seminars.title": "Seminars",
     "seminars.subtitle": "Scientific meetings on embedded AI",
     "seminars.upcoming": "Upcoming",
     "seminars.past": "Past seminars",
+
+    "offers.title": "Offers",
+    "offers.subtitle": "Internships and PhD positions on embedded AI in Toulouse",
+    "offers.internships": "Internships",
+    "offers.phd": "PhD positions",
+    "offers.tag.m2": "M2 internship",
+    "offers.none": "No offers at the moment.",
 
     "collab.title": "Collaborators",
     "role.mcf": "Assoc. Prof.",

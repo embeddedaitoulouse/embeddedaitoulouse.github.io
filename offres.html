@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr" data-title="page.title.offers">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offres – Défi IA Embarquée Toulouse</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="lang-switch" role="group" aria-label="Langue / Language">
+            <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <ul>
+            <li><a href="index.html#intro" data-i18n="nav.intro">Introduction</a></li>
+            <li><a href="index.html#news" data-i18n="nav.news">Actualités</a></li>
+            <li><a href="seminaires.html" data-i18n="nav.seminars">Séminaires</a></li>
+            <li><a href="communaute.html" data-i18n="nav.community">Communauté</a></li>
+            <li><a href="offers.html" aria-current="page" data-i18n="nav.offers">Offres</a></li>
+            <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+
+        <a href="https://aniti.univ-toulouse.fr/en/" target="_blank" rel="noopener">
+            <img src="images/aniti.png" alt="ANITI" class="nav-logo">
+        </a>
+    </div>
+</nav>
+
+<header>
+    <h1 data-i18n="offers.title">Offres</h1>
+    <p data-i18n="offers.subtitle">Stages et thèses autour de l’IA embarquée à Toulouse</p>
+</header>
+
+<section id="internships">
+    <h2 data-i18n="offers.internships">Stages</h2>
+
+    <article class="card offer">
+        <span class="tag" data-i18n="offers.tag.m2">Stage M2</span>
+        <h3>Extending Constraint-Based Neural Network Quantization for FPGA Deployment</h3>
+        <p class="resources"><a href="pdfs/offre-stage-quantification-fpga.pdf" target="_blank" rel="noopener">📄 PDF</a></p>
+    </article>
+</section>
+
+<section id="phd-offers">
+    <h2 data-i18n="offers.phd">Thèses</h2>
+    <p class="empty" data-i18n="offers.none">Aucune offre pour le moment.</p>
+</section>
+
+<footer>
+    <p data-i18n="footer.text">&copy; 2026 Défi Embarquabilité de l'IA Toulouse</p>
+</footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>

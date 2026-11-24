@@ -252,3 +252,39 @@ html { scroll-behavior: smooth; }
     margin-bottom: 0.5rem;
 }
 .empty { color: #666; font-style: italic; }
+/* RÉSUMÉ REPLIABLE (Afficher / Masquer) */
+.abstract { margin-top: 0.6rem; }
+
+.abstract summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #004080;
+    user-select: none;
+}
+.abstract summary::-webkit-details-marker { display: none; }
+.abstract summary::before { content: "▸"; transition: transform 0.2s; }
+.abstract[open] summary::before { transform: rotate(90deg); }
+.abstract summary:hover { text-decoration: underline; }
+.abstract summary:focus-visible { outline: 2px solid #004080; outline-offset: 2px; border-radius: 3px; }
+
+.abstract .less { display: none; }
+.abstract[open] .more { display: none; }
+.abstract[open] .less { display: inline; }
+
+.abstract-text {
+    margin-top: 0.5rem;
+    padding: 0.8rem 1rem;
+    border-left: 3px solid #004080;
+    background: #fff;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+.abstract-text p { margin-bottom: 0.6rem; }
+.abstract-text p:last-child { margin-bottom: 0; }
